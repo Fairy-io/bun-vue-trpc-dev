@@ -1,17 +1,16 @@
 {
-  "name": "bun-vue-trpc-dev",
+  "name": "frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "index.ts",
   "scripts": {
     "dev": "vite",
     "vue:build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
-  "workspaces": ["packages/*"],
   "dependencies": {
-    "frontend": "workspace:*",
-    "backend": "workspace:*"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
