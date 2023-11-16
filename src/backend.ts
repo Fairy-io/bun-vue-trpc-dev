@@ -1,3 +1,3 @@
-import { some } from 'backend';
+import { init } from 'backend';
 
-some();
+init();

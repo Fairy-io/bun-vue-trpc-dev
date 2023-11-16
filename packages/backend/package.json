@@ -9,6 +9,7 @@
     "license": "ISC",
     "dependencies": {
         "@trpc/client": "^10.43.3",
-        "@trpc/server": "^10.43.3"
+        "@trpc/server": "^10.43.3",
+        "express": "^4.18.2"
     }
 }
