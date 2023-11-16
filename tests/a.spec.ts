@@ -1,7 +1,7 @@
-import { expect, it, describe } from "bun:test";
+import { expect, it, describe } from 'bun:test';
 
 describe('abc', () => {
     it('abc', async () => {
-        expect('abc').toBe('abc')
-    })
-})
+        expect('abc').toBe('abc');
+    });
+});

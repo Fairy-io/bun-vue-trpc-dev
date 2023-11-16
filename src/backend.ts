@@ -1,3 +1,3 @@
-import {some} from 'backend'
+import { some } from 'backend';
 
-some()
+some();
