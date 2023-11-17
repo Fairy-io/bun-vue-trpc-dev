@@ -1,10 +1,11 @@
 {
-    "name": "frontend",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "main": "index.ts",
-    "dependencies": {
-        "vue": "^3.3.4"
-    }
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "dependencies": {
+    "@trpc/client": "^10.43.3",
+    "vue": "^3.3.4"
+  }
 }

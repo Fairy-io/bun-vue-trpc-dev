@@ -1,19 +1,8 @@
 {
     "name": "bun-vue-trpc-dev",
-    "private": true,
     "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "concurrently \"bun backend:dev\" \"bun frontend:dev\"",
-        "backend:dev": "bun --hot run ./src/backend",
-        "frontend:dev": "vite",
-        "vue:build": "vue-tsc && vite build",
-        "preview": "vite preview"
-    },
-    "workspaces": [
-        "packages/*"
-    ],
     "devDependencies": {
+        "@types/cors": "^2.8.16",
         "@types/express": "^4.17.21",
         "@vitejs/plugin-vue": "^4.2.3",
         "bun-types": "^1.0.11",
@@ -21,5 +10,18 @@
         "typescript": "^5.0.2",
         "vite": "^4.4.5",
         "vue-tsc": "^1.8.5"
-    }
+    },
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"bun backend:dev\" \"bun frontend:dev\"",
+        "backend:dev": "bun --hot run ./src/backend",
+        "frontend:dev": "vite",
+        "vue:build": "vue-tsc && vite build",
+        "server:build": "bun build ./src/backend.ts --outfile=server.js --sourcemap --target=bun --minify",
+        "preview": "vite preview"
+    },
+    "type": "module",
+    "workspaces": [
+        "packages/*"
+    ]
 }

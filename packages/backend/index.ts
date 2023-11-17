@@ -1,9 +1,18 @@
-import express from 'express';
+import * as trpcExpress from '@trpc/server/adapters/express';
+import { trpc, createContext } from './src/trpc';
 
-export const init = async () => {
-    const app = express();
+import { helloWorld } from './src/procedures/helloWorld';
 
-    app.listen(3000, () => {
-        console.log('Trpc server listening on port 3000');
+const router = trpc.router({
+    helloWorld,
+});
+
+export type Router = typeof router;
+
+export const trpcMiddleware =
+    trpcExpress.createExpressMiddleware({
+        router,
+        createContext,
     });
-};
+
+export { validation as helloWorldValidation } from './src/validations/helloWorld';

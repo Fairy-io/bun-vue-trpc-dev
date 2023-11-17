@@ -1,15 +1,16 @@
 {
-    "name": "backend",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.ts",
-    "scripts": {},
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@trpc/client": "^10.43.3",
-        "@trpc/server": "^10.43.3",
-        "express": "^4.18.2"
-    }
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@trpc/server": "^10.43.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "zod": "^3.22.4"
+  }
 }

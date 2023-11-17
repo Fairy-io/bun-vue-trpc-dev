@@ -6,5 +6,5 @@
     "arrowParens": "always",
     "useTabs": false,
     "endOfLine": "auto",
-    "printWidth": 120
+    "printWidth": 60
 }
