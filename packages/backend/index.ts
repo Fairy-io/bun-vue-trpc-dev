@@ -1,11 +1,6 @@
 import * as trpcExpress from '@trpc/server/adapters/express';
-import { trpc, createContext } from './src/trpc';
-
-import { helloWorld } from './src/procedures/helloWorld';
-
-const router = trpc.router({
-    helloWorld,
-});
+import { createContext } from './src/trpc';
+import { router } from './src/trpc/router';
 
 export type Router = typeof router;
 
