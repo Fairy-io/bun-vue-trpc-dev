@@ -1,5 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import {
+    setup,
+    type Meta,
+    type StoryObj,
+} from '@storybook/vue3';
+import { provide } from 'vue';
 import Home from '../../pages/Home.vue';
+import { mockedClient } from '../../trpc';
 
 const meta = {
     title: 'pages/Home',
@@ -12,11 +18,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {},
-    decorators: [
-        () => {
-            return {
-                template: '<Suspense><story /></Suspense>',
-            };
+    render: () => ({
+        components: { Home },
+
+        setup() {
+            provide('trpc-client', mockedClient);
         },
-    ],
+        template: '<Suspense><Home /></Suspense>',
+    }),
 };

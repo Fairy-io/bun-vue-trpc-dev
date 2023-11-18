@@ -1,24 +1,12 @@
 <script setup lang="ts">
-import {
-    createTRPCProxyClient,
-    httpBatchLink,
-} from '@trpc/client';
+import { inject } from 'vue';
+import { Client } from '../trpc';
 import HelloWorld from '../components/HelloWorld.vue';
-import type { Router } from 'backend';
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const client = inject<Client>('trpc-client');
 
-const client = createTRPCProxyClient<Router>({
-    links: [
-        httpBatchLink({
-            url: `${backendUrl}/trpc`,
-        }),
-    ],
-});
-
-const { message } = await client.helloWorld.query('abc');
-
-console.log(message);
+const { message } =
+    (await client?.helloWorld.query('message')) || {};
 </script>
 
 <template>
@@ -32,7 +20,7 @@ console.log(message);
         class="logo vue"
         alt="Vue logo"
     />
-    <HelloWorld msg="Vite + Vue" />
+    <HelloWorld :msg="message" />
 </template>
 
 <style scoped></style>
