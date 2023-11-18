@@ -13,7 +13,7 @@
     },
     "private": true,
     "scripts": {
-        "dev": "concurrently \"bun backend:dev\" \"bun frontend:dev\"",
+        "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgGreen.bold\" \"bun backend:dev\" \"bun frontend:dev\"",
         "backend:dev": "bun --hot run ./src/backend",
         "frontend:dev": "vite",
         "vue:build": "vue-tsc && vite build",

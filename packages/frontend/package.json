@@ -6,6 +6,7 @@
   "main": "index.ts",
   "dependencies": {
     "@trpc/client": "^10.43.3",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   }
 }

@@ -1,4 +1,4 @@
 import { createApp } from 'vue';
-import { App } from 'frontend';
+import { App, router } from 'frontend';
 
-createApp(App).mount('#app');
+createApp(App).use(router).mount('#app');
