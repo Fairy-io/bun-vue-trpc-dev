@@ -19,7 +19,7 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "types": ["bun-types"],
+        "types": ["bun-types", "./disable_react_types"],
         "strictNullChecks": true
     },
     "include": [
@@ -27,5 +27,6 @@
         "src/**/*.d.ts",
         "src/**/*.tsx",
         "src/**/*.vue"
-    ]
+    ],
+    "exclude": ["**/*.stories.ts"]
 }

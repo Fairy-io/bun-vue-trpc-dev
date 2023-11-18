@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+// import { useRoute } from 'vue-router';
 
-defineProps<{ name: string }>();
+defineProps<{
+    /**
+     * route param: /about/:name
+     */
+    name: string;
+}>();
 
-const route = useRoute();
-const query: { n?: string } = route.query;
+// this query does not work good in storybook
+// const route = useRoute();
+// const query: { n?: string } = route.query;
 </script>
 
-<template>
-    This is page about {{ name }}. Hello,
-    {{ query.n?.toUpperCase() }}
-</template>
+<template>This is page about {{ name }}</template>
