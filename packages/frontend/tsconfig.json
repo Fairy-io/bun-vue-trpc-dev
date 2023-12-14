@@ -19,7 +19,7 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "types": ["bun-types", "./disable_react_types"],
+        "types": ["bun-types"],
         "strictNullChecks": true
     },
     "include": [
