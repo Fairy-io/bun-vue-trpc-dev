@@ -9,5 +9,3 @@ export const trpcMiddleware =
         router,
         createContext,
     });
-
-export { validation as helloWorldValidation } from './src/validations/helloWorld';
