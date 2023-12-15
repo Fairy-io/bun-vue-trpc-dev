@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "module": "NodeNext",
+        "lib": [],
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "types": ["bun-types"],
+        "moduleResolution": "NodeNext"
+    }
+}
