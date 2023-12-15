@@ -20,7 +20,9 @@ const { message } =
         class="logo vue"
         alt="Vue logo"
     />
-    <HelloWorld :msg="message || ''" />
+    <div data-testid="home-page-content">
+        <HelloWorld :msg="message || ''" />
+    </div>
 </template>
 
 <style scoped></style>
