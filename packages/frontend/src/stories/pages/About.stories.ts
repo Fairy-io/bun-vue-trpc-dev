@@ -19,7 +19,7 @@ export const AboutCompany: Story = {
     play: async ({ canvasElement, step }) => {
         const canvas = within(canvasElement);
 
-        step('check content', () => {
+        await step('check content', () => {
             const content =
                 canvas.getByTestId('about-content');
 
@@ -38,7 +38,7 @@ export const AboutDevs: Story = {
     play: async ({ canvasElement, step }) => {
         const canvas = within(canvasElement);
 
-        step('check content', () => {
+        await step('check content', () => {
             const content =
                 canvas.getByTestId('about-content');
 

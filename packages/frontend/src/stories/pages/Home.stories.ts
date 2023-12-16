@@ -31,7 +31,7 @@ export const Default: Story = {
     play: async ({ canvasElement, step }) => {
         const canvas = within(canvasElement);
 
-        step('check message', async () => {
+        await step('check message', async () => {
             await waitFor(() => {
                 const label = canvas.getByTestId(
                     'home-page-content',

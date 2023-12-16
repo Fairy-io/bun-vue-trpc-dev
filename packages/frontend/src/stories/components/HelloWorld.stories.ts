@@ -19,7 +19,7 @@ export const Default: Story = {
     play: async ({ canvasElement, step }) => {
         const canvas = within(canvasElement);
 
-        step('check message', () => {
+        await step('check message', () => {
             const label = canvas.getByTestId(
                 'hello-world-content',
             );
