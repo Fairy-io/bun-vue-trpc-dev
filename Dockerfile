@@ -10,11 +10,14 @@ RUN curl -fsSL https://bun.sh/install | bash
 
 RUN cp -r ~/.bun/bin/* .
 
-FROM ubuntu:20.04
+FROM node:18
 
 WORKDIR /app
 
 COPY --from=bun /app /usr/local/sbin
+
+RUN bun x playwright install
+RUN bun x playwright install-deps
 
 COPY package.json .
 COPY bun.lockb .
