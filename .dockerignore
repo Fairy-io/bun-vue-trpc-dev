@@ -1,5 +1,4 @@
 node_modules
-packages
 
 .dockerignore
 Dockerfile
@@ -7,6 +6,8 @@ Dockerfile
 public
 index.html
 app
+dist
+server.js
 
 LICENSE
 README.md
