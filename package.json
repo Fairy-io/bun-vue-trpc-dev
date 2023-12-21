@@ -16,6 +16,7 @@
         "@vitejs/plugin-vue": "^4.2.3",
         "bun-types": "^1.0.18",
         "concurrently": "^8.2.2",
+        "github-api": "^3.4.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "start-server-and-test": "^2.0.3",
