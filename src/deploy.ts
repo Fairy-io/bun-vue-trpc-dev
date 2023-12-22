@@ -56,7 +56,7 @@ const deploy = async (data: z.infer<typeof schema>) => {
         new Github({ token })
             .getRepo(owner, repo)
             .writeFile(
-                'feature/deploy_script',
+                'main',
                 path,
                 deployment,
                 `creating deployment: ${name}, for image: ${image}`,
