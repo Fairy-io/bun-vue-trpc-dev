@@ -23,6 +23,7 @@ RUN mkdir app
 RUN bun install
 
 COPY . .
+RUN bun add zod
 RUN rm package.json
 RUN rm bun.lockb
 
