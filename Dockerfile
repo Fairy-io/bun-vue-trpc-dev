@@ -9,6 +9,8 @@ RUN apt install unzip -y
 RUN curl -fsSL https://bun.sh/install | bash
 
 RUN cp -r ~/.bun/bin/* .
+COPY ./deploy.sh ./deploy
+RUN chmod +x ./deploy
 
 FROM ubuntu:20.04 as dependencies
 
@@ -23,8 +25,10 @@ RUN mkdir app
 RUN bun install
 
 COPY . .
-RUN chmod +x ./deploy.sh
 RUN bun add zod
+
+RUN bun test
+
 RUN rm package.json
 RUN rm bun.lockb
 
@@ -34,7 +38,7 @@ FROM node:18
 
 WORKDIR /app
 
-COPY --from=bun /app /usr/local/sbin
+COPY --from=dependencies /usr/local/sbin /usr/local/sbin
 
 RUN bun x playwright install
 RUN bun x playwright install-deps

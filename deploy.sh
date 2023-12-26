@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bun ./src/deploy "$@"
+bun /app/src/deploy/src/index.ts "$@"
