@@ -45,13 +45,17 @@ export const GithubMock = (
             options: {},
             cb: (error: any, data: any) => Promise<void>,
         ) {
-            expect(branch).toBe(expects.branch);
-            expect(path).toBe(expects.path);
-            expect(content).toBe(expects.content);
-            expect(message).toBe(expects.message);
-            expect(options).toEqual(expects.options);
-
-            await cb(null, {});
+            try {
+                expect(branch).toBe(expects.branch);
+                expect(path).toBe(expects.path);
+                expect(content).toBe(expects.content);
+                expect(message).toBe(expects.message);
+                expect(options).toEqual(expects.options);
+            } catch (error) {
+                throw error;
+            } finally {
+                await cb(null, {});
+            }
         }
     }
 
