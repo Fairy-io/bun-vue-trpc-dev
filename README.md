@@ -214,7 +214,7 @@ The [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template) f
 
 #### Enhancements
 
--   Added the `deploy.sh` script, invoking `./src/deploy.ts` for increased project flexibility.
+-   Added the `deploy.sh` script, invoking `./src/deploy.ts` for increased project flexibility
 
 ### Version 2.0.0
 
@@ -227,3 +227,9 @@ The [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template) f
 #### Enhancements
 
 -   Refactored code in the deploy script
+
+### Version 2.1.0
+
+#### Enhancements
+
+-   `PORT` environment variable for trpc server is now supported
