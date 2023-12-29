@@ -17,6 +17,8 @@ app.use('*', (_req, res) => {
     return res.sendFile(path.join(publicDir, 'index.html'));
 });
 
-app.listen(3000, () => {
-    console.log('Trpc server listening on port 3000');
+const { PORT = '3000' } = process.env;
+
+app.listen(PORT, () => {
+    console.log(`Trpc server listening on port ${PORT}`);
 });
