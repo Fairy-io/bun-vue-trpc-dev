@@ -10,10 +10,16 @@
 -   [Storybook](https://storybook.js.org) - Components preview.
 -   [Storybook Test runner](https://storybook.js.org/docs/writing-tests/test-runner) - Frontend testing for CI/CD.
 
+### Images
+
 Two images are currently included:
 
 -   [bun-vue-trpc-dev-utils](https://hub.docker.com/repository/docker/massfice/bun-vue-trpc-dev-utils/general)
+    -   Supports both arm64 and amd64 versions for all releases (tags).
+    -   For amd64 versions, tags are suffixed with `-amd64`. For example, `massfice/bun-vue-trpc-dev-utils:1.0.0` is the arm64 version, while `massfice/bun-vue-trpc-dev-utils:1.0.0-amd64` is the amd64 version.
 -   [bun-vue-trpc-dev-ci](https://hub.docker.com/repository/docker/massfice/bun-vue-trpc-dev-ci/general)
+    -   Supports arm64 versions for all releases (tags).
+    -   For amd64 versions, support starts from version 2.2.0. Tags for amd64 versions are suffixed with `-amd64`. For example, `massfice/bun-vue-trpc-dev-ci:2.2.0` is the arm64 version, and `massfice/bun-vue-trpc-dev-ci:2.2.0-amd64` is the amd64 version.
 
 ## How to use it?
 
