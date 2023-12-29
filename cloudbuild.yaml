@@ -1,0 +1,57 @@
+steps:
+    - name: gcr.io/cloud-builders/docker
+      args:
+          - '-c'
+          - >-
+              echo $$DOCKERHUB_PASSWORD | docker login --username $_DOCKERHUB_USERNAME
+              --password-stdin
+      id: Login to dockehub
+      entrypoint: bash
+      secretEnv:
+          - DOCKERHUB_PASSWORD
+    - name: 'ghcr.io/depot/cli:latest'
+      args:
+          - build
+          - '--project'
+          - $_DEPOT_PROJECT_ID
+          - '--build-platform'
+          - linux/arm64
+          - '--tag'
+          - 'massfice/$_IMAGE_NAME-utils:$_IMAGE_TAG'
+          - '--target'
+          - dependencies
+          - '--push'
+          - .
+      id: Build utils image arm64 version
+      secretEnv:
+          - DEPOT_TOKEN
+    - name: 'ghcr.io/depot/cli:latest'
+      args:
+          - build
+          - '--project'
+          - $_DEPOT_PROJECT_ID
+          - '--build-platform'
+          - linux/amd64
+          - '--tag'
+          - 'massfice/$_IMAGE_NAME-utils:$_IMAGE_TAG-amd64'
+          - '--target'
+          - dependencies
+          - '--push'
+          - .
+      id: Build utils image amd64 version
+      secretEnv:
+          - DEPOT_TOKEN
+    - name: 'ghcr.io/depot/cli:latest'
+      args:
+          - build
+          - '--project'
+          - $_DEPOT_PROJECT_ID
+          - '--build-platform'
+          - linux/arm64
+          - '--tag'
+          - 'massfice/$_IMAGE_NAME-ci:$_IMAGE_TAG'
+          - '--push'
+          - .
+      id: Build ci image
+      secretEnv:
+          - DEPOT_TOKEN
