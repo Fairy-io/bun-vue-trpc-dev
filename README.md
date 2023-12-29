@@ -233,3 +233,9 @@ The [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template) f
 #### Enhancements
 
 -   `PORT` environment variable for trpc server is now supported
+
+### Version 2.2.0
+
+#### Enhancements
+
+-   Modified `cloudbuild.yaml` to build `amd64` ci image versions

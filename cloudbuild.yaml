@@ -52,7 +52,21 @@ steps:
           - 'massfice/$_IMAGE_NAME-ci:$_IMAGE_TAG'
           - '--push'
           - .
-      id: Build ci image
+      id: Build ci image arm64 version
+      secretEnv:
+          - DEPOT_TOKEN
+    - name: 'ghcr.io/depot/cli:latest'
+      args:
+          - build
+          - '--project'
+          - $_DEPOT_PROJECT_ID
+          - '--build-platform'
+          - linux/amd64
+          - '--tag'
+          - 'massfice/$_IMAGE_NAME-ci-amd64:$_IMAGE_TAG'
+          - '--push'
+          - .
+      id: Build ci image amd64 version
       secretEnv:
           - DEPOT_TOKEN
 availableSecrets:
