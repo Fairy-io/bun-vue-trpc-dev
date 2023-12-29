@@ -55,3 +55,9 @@ steps:
       id: Build ci image
       secretEnv:
           - DEPOT_TOKEN
+availableSecrets:
+    secretManager:
+        - versionName: $_DEPOT_TOKEN_VERSION
+          env: DEPOT_TOKEN
+        - versionName: $_DOCKERHUB_PASSWORD_VERSION
+          env: DOCKERHUB_PASSWORD
