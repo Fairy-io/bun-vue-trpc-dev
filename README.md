@@ -227,4 +227,3 @@ The [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template) f
 #### Enhancements
 
 -   Refactored code in the deploy script
-    small change
