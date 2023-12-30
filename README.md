@@ -250,4 +250,4 @@ The [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template) f
 
 #### Fixes
 
--   Excluded `cloudbuild.yaml` wchich was causing issue with [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template): [#16](./issues/16)
+-   Excluded `cloudbuild.yaml` wchich was causing issue with [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template): [#16](../../../issues/16)
