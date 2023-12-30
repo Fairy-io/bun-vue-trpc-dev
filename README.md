@@ -245,3 +245,9 @@ The [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template) f
 #### Enhancements
 
 -   Modified `cloudbuild.yaml` to build `amd64` ci image versions
+
+### Version 2.2.1
+
+#### Fixes
+
+-   Excluded `cloudbuild.yaml` wchich was causing issue with [bun-vue-trpc-template](https://github.com/Fairy-io/bun-vue-trpc-template): [#16](./issues/16)
